@@ -1,0 +1,76 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://d3js.org/d3.v4.min.js"></script>
+        <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+        <script type="text/javascript" src="http://netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+        <link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+        <link href="http://pingendo.github.io/pingendo-bootstrap/themes/default/bootstrap.css" rel="stylesheet" type="text/css">
+        <script type="text/javascript" src="./lib/hex.js"></script>
+        <script type="text/javascript" src="./WeatherHex.js"></script>
+        <script type="text/javascript" src="./weather.js"></script>
+    </head>
+    <body>
+        <div class="navbar navbar-default navbar-static-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-ex-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">
+                        <span>Weather Cellular Automaton</span>
+                    </a>
+                </div>
+                <div class="collapse navbar-collapse" id="navbar-ex-collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="active">
+                            <a href="#">Home</a>
+                        </li>
+                        <li>
+                            <a href="#">Contacts</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-9">
+                        <svg id="hexmap" style="width: 100%; height: 100%;"></svg>
+                    </div>
+                    <div class="col-md-3">
+                        <ul class="nav nav-justified nav-tabs">
+                            <li class="active">
+                                <a href="#edit" data-toggle="tab">Edit</a>
+                            </li>
+                            <li>
+                                <a href="#paint" data-toggle="tab">Paint</a>
+                            </li>
+                            <li>
+                                <a href="#simulate" data-toggle="tab">Simulate</a>
+                            </li>
+                        </ul>
+                        <div class="tab-content">
+                            <div id="edit" class="tab-pane active">
+                                Edit pane
+                            </div>
+                            <div id="paint" class="tab-pane">
+                                Paint mode
+                            </div>
+                            <div id="simulate" class="tab-pane">
+                                <textarea id="json" style="width: 100%; height: 60%;"></textarea>
+                                <button class="btn btn-primary">Next</button>
+                                <button class="btn btn-default">Load</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
